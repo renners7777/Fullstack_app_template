@@ -7,16 +7,18 @@
 
 //4. Connect to MongoDB + add connection string to .env file
 
-//5. Create Port
+//5. Add .env to .gitignore file
+
+//6. Create Port
 
 //---test mongo and port connection
 
-//6. Set Middleware
+//7. Set Middleware
 
-//7. Create .gitignore file
+//8. Create .gitignore file
 
-//8. Create public and views folders - add main.js + style.css to Public and index.ejs to Views
+//9. Create public and views folders - add main.js + style.css to Public and index.ejs to Views
 
-//9. From root, init local repo and commit
+//10. From root, init local repo and commit
 
-//10. Create cyclic repo
+//11. Create cyclic repo

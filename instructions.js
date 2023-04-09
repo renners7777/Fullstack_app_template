@@ -21,4 +21,6 @@
 
 //10. Create public and views folders - add main.js + style.css to Public and index.ejs to Views
 
+//11. Add content to main.js, index.ejs, style.css
+
 //11. Create cyclic repo

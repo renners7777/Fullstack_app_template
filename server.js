@@ -10,6 +10,19 @@ let db,
   dbName = "sample_mflix",
   collection; 
 
+      app.set("view engine", "ejs");
+      app.use(express.static("public"));
+      app.use(express.urlencoded({ extended: true }));
+      app.use(express.json());
+      app.use(cors());
+
+      app.get("/", async (request, response) => {
+        try {
+          response.render("index");
+        } catch (error) {
+          response.status(500).send({ message: error.message });
+        }
+      });
 
 MongoClient.connect(dbConnectionString)
     .then(client => {
@@ -19,20 +32,6 @@ MongoClient.connect(dbConnectionString)
     })
     .catch(err => {
         console.log(err)
-    })
-
-    app.set('view engine', 'ejs')
-    app.use(express.static('public'))
-    app.use(express.urlencoded({extended:true}))
-    app.use(express.json())
-    app.use(cors())
-
-    app.get('/', async(request, response) => {
-        try {
-            response.render("index");
-        } catch (error) {
-            response.status(500).send({message: error.message})
-        }
     })
 
     //PORT 8000

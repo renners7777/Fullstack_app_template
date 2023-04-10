@@ -18,7 +18,7 @@ let db,
 
       app.get("/", async (request, response) => {
         try {
-          response.render("index.ejs");
+          response.render('Views\index.ejs');
         } catch (error) {
           response.status(500).send({ message: error.message });
         }

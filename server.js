@@ -3,7 +3,7 @@ const app = express()
 const cors = require("cors")
 const MongoClient = require("mongodb").MongoClient
 require('dotenv').config()
-const PORT = 5050; 
+const PORT = 8000; 
 
 let db,
   dbConnectionString = process.env.DB_STRING, //What does this mean? Grabbing variable from env file.
@@ -27,15 +27,15 @@ MongoClient.connect(dbConnectionString)
     app.use(express.json())
     app.use(cors())
 
-    app.get('/', async (request, response) => {
+    app.get('/', async(request, response) => {
         try {
-            response.render('index.ejs')
+            response.render('index.ejs');
         } catch (error) {
             response.status(500).send({message: error.message})
         }
     })
 
-    //PORT 5050
+    //PORT 8000
     app.listen(process.env.PORT || PORT, () =>{
-        console.log(`Server running on Port 5050...`)
+        console.log(`Server running on Port 8000...`)
     })
